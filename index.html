@@ -662,30 +662,45 @@
     </div>
 
     <div id="fn-set" class="row"> 
-        <a class="col btn-flat disabled jsdef ml-60" title="FN Setting" lang="zh_sc">选择按键功能</a>
-
-        <a id="kind_dropdown-btn">选择按键功能</a>
+        <a class="col btn-flat disabled jsdef ml-60" title="FN Setting">选择按键功能</a>
+        
+        <a id="kind_dropdown-btn" data-dropkind="类型">选择按键功能</a>
         <ul id="kind_dropdown"></ul>
 
-        <a id="keycodes_dropdown-btn">选择按键</a>
-        <ul id="keycodes_dropdown"></ul>
-
-        <a id="keycodes4tap_dropdown-btn">选择按键</a>
+        <a id="keycodes4tap_dropdown-btn" data-dropkind="按键">选择按键</a>
         <ul id="keycodes4tap_dropdown"></ul>
 
-        <a id="key_mods_dropdown-btn">选择修饰键</a>
-        <ul id="key_mods_dropdown"></ul>
+        <a id="key_mods_dropdown-btn" data-dropkind="修饰键">选择修饰键</a>
+        <ul id="key_mods_dropdown">
+            <li class="optgroup-option"><span>
+                <label id="select-lmods"><input type="radio" value="0"  class="with-gap" name="mods"><span>Left</span></label>
+                <label id="select-rmods"><input type="radio" value="0x10" class="with-gap" name="mods"><span>Right</span></label>
+            </span></li>
+            <li class="optgroup-option"><span><label><input type="checkbox" value="1"><span>Ctrl</span></label></span></li>
+            <li class="optgroup-option"><span><label><input type="checkbox" value="2"><span>Shift</span></label></span></li>
+            <li class="optgroup-option"><span><label><input type="checkbox" value="4"><span>Alt</span></label></span></li>
+            <li class="optgroup-option"><span><label><input type="checkbox" value="8"><span>Win</span></label></span></li>
+        </ul>
 
-        <a id="layer_dropdown-btn">选择层</a>
+        <a id="layer_mods_dropdown-btn" data-dropkind="修饰键">选择修饰键</a>
+        <ul id="layer_mods_dropdown">
+            <li class="optgroup"><span>Left Mods</span></li>
+            <li class="optgroup-option"><span><label><input type="checkbox" value="1"><span>Ctrl</span></label></span></li>
+            <li class="optgroup-option"><span><label><input type="checkbox" value="2"><span>Shift</span></label></span></li>
+            <li class="optgroup-option"><span><label><input type="checkbox" value="4"><span>Alt</span></label></span></li>
+            <li class="optgroup-option"><span><label><input type="checkbox" value="8"><span>Win</span></label></span></li>
+        </ul>
+
+        <a id="keycodes_dropdown-btn" data-dropkind="按键">选择按键</a>
+        <ul id="keycodes_dropdown"></ul>
+
+        <a id="layer_dropdown-btn" data-dropkind="层">选择层</a>
         <ul id="layer_dropdown"></ul>
 
-        <a id="layer_tap_dropdown-btn">选择层</a>
+        <a id="layer_tap_dropdown-btn" data-dropkind="层">选择层</a>
         <ul id="layer_tap_dropdown"></ul>
 
-        <a id="layer_mods_dropdown-btn">选择层</a>
-        <ul id="layer_mods_dropdown"></ul>
-
-        <a id="layer_on_dropdown-btn">选择层</a>
+        <a id="layer_on_dropdown-btn" data-dropkind="层">选择层</a>
         <ul id="layer_on_dropdown"></ul>
 
         <a id="launch_shortcut_dropdown-btn">选择快捷方式</a>
@@ -728,9 +743,10 @@
                 <p class="grey-text text-lighten-4"  lang="zh_sc">QQ群：24764798（本群为YDKB系列产品交流及售后群，其他产品仅限固件bug反馈或疑难问题，常规使用及售后请找卖家）<br>
                 E-mail: drk#live.com</p>
             </div>
-            <div class="col l4 offset-l2 s12">
+            <div class="col l5 offset-l1 s12">
                 <h5 class="white-text" lang="zh_sc">链接</h5>
                 <ul>
+                    <li><span class="grey-text text-lighten-3">可通过 <a class="grey-text text-lighten-3" href="https://ydkb.io" target="_blank">ydkb.io / <a class="grey-text text-lighten-3" href="https://ydkb.github.io" target="_blank">ydkb.github.io</a> / <a class="grey-text text-lighten-3" href="https://ydkb.gitee.io" target="_blank">ydkb.gitee.io 访问本站</span></li>
                     <li><a class="grey-text text-lighten-3" href="http://test.ydkb.io" target="_blank">YDKB Keyboard Tester</a></li>
                     <li><a class="grey-text text-lighten-3" href="http://yang.tkg.io" target="_blank">TMK Keymap Generator</a></li>
                 </ul>
